@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legacy Motors | Concessionária em Vila Velha - ES</title>
+  <meta name="description"
+    content="Legacy Motors: catálogo de veículos novos, seminovos e usados em Vila Velha, ES. Atendimento e agendamento via WhatsApp." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="header" id="topo">
+    <div class="container nav">
+      <a href="#topo" class="logo"><span>Legacy</span> Motors</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#carros">Carros</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="favoritos.html">Favoritos</a>
+
+        <a class="btn small" target="_blank" href="https://wa.me/5527999999999">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Concessionária premium em Vila Velha - ES</p>
+          <h1>Encontre o carro ideal com confiança e atendimento personalizado.</h1>
+          <p class="hero-text">A Legacy Motors reúne veículos selecionados, filtros inteligentes e atendimento direto
+            por WhatsApp para facilitar sua compra.</p>
+          <div class="hero-actions">
+            <a href="#carros" class="btn">Ver veículos</a>
+            <a target="_blank"
+              href="https://wa.me/5527999999999?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20vendedor%20da%20Legacy%20Motors."
+              class="btn outline">Falar com vendedor</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Venda 100% via WhatsApp</h3>
+          <p>Escolha o veículo, tire dúvidas e agende sua visita diretamente com a equipe comercial.</p>
+          <div class="stats">
+            <span><strong>+40</strong> veículos</span>
+            <span><strong>ES</strong> Vila Velha</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="carros">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2>Veículos disponíveis</h2>
+        </div>
+        <select id="sortSelect" class="input">
+          <option value="recentes">Mais recentes</option>
+          <option value="modelo">Modelo</option>
+          <option value="maiorPreco">Maior preço</option>
+          <option value="menorPreco">Menor preço</option>
+          <option value="anoNovo">Ano mais novo</option>
+          <option value="menorKm">Menor quilometragem</option>
+        </select>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" class="input full" placeholder="Buscar por nome, modelo, marca, combustível..." />
+        <select id="typeFilter" class="input">
+          <option value="">Todos</option>
+          <option>Novo</option>
+          <option>Seminovo</option>
+          <option>Usado</option>
+        </select>
+        <select id="brandFilter" class="input">
+          <option value="">Todas as marcas</option>
+        </select>
+        <select id="gearFilter" class="input">
+          <option value="">Câmbio</option>
+          <option>Automático</option>
+          <option>Manual</option>
+        </select>
+        <select id="fuelFilter" class="input">
+          <option value="">Combustível</option>
+          <option>Flex</option>
+          <option>Gasolina</option>
+          <option>Diesel</option>
+          <option>Elétrico</option>
+          <option>Híbrido</option>
+        </select>
+        <input id="minPrice" class="input" type="number" placeholder="Preço mín." />
+        <input id="maxPrice" class="input" type="number" placeholder="Preço máx." />
+      </div>
+
+      <div id="carsGrid" class="cars-grid"></div>
+      <p id="emptyState" class="empty hidden">Nenhum veículo encontrado.</p>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Sobre nós</p>
+          <h2>Legacy Motors</h2>
+          <p>Somos uma concessionária focada em veículos selecionados, atendimento transparente e experiência premium.
+            Nosso objetivo é conectar você ao carro ideal com segurança, agilidade e suporte personalizado.</p>
+        </div>
+        <div class="about-box">
+          <strong>Atendimento consultivo</strong>
+          <span>Vendas, agendamentos e negociações são feitos pelo WhatsApp.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="contato">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Fale com a Legacy Motors</h2>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="mailto:legacymotors@gmail.com" method="post" enctype="text/plain">
+          <input class="input" name="nome" placeholder="Seu nome" required />
+          <input class="input" name="email" placeholder="Seu e-mail" type="email" required />
+          <input class="input" name="telefone" placeholder="Telefone" />
+          <textarea class="input" name="mensagem" placeholder="Mensagem" required></textarea>
+          <button class="btn" type="submit">Enviar contato</button>
+        </form>
+        <div class="map-card">
+          <iframe title="Mapa Vila Velha ES"
+            src="https://www.google.com/maps?q=Vila%20Velha%20Espirito%20Santo&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="#topo"><span>Legacy</span> Motors</a>
+        <p>Concessionária em Vila Velha - Espírito Santo.</p>
+      </div>
+      <div>
+        <h4>Sitemap</h4><a href="#carros">Carros</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a
+          href="admin/index.html">Admin</a>
+      </div>
+      <div>
+        <h4>Redes sociais</h4><a target="_blank" href="https://instagram.com/legacymotors">Instagram</a><a
+          target="_blank" href="https://wa.me/5527999999999">WhatsApp</a>
+      </div>
+      <div>
+        <h4>Informações legais</h4><a href="#">Política de privacidade</a><a href="#">Termos de uso</a>
+        <p>© 2026 Legacy Motors.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="assets/config.js"></script>
+    <script src="assets/config.local.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+
+</html>

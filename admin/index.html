@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Legacy Motors</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        if (localStorage.getItem('legacy_admin') !== 'true') {
+            document.documentElement.style.visibility = 'hidden';
+        }
+    </script>
+</head>
+
+<body class="admin-body">
+    <div id="loginScreen" class="login hidden">
+        <form class="login-card" id="loginForm"><a class="logo" href="../index.html"><span>Legacy</span> Motors</a>
+            <h1>Painel Admin</h1><input class="input" id="email" type="email" placeholder="E-mail" required><input
+                class="input" id="password" type="password" placeholder="Senha" required><button class="btn"
+                type="submit">Entrar</button>
+        </form>
+    </div>
+    <div id="adminApp" class="admin-layout hidden">
+        <aside class="sidebar"><a href="../index.html">Ver site</a><button id="logoutBtn">Sair</button></aside>
+        <main class="admin-main">
+            <h1>Gerenciar veículos</h1>
+            <section class="admin-card">
+                <h2 id="formTitle">Adicionar veículo</h2>
+                <form id="carForm" class="admin-form"><input type="hidden" id="carId"><input class="input" id="name"
+                        placeholder="Nome do veículo" required><input class="input" id="brand" placeholder="Marca"
+                        required><input class="input" id="model" placeholder="Modelo" required><input class="input"
+                        id="year" type="number" placeholder="Ano" required><input class="input" id="price" type="number"
+                        placeholder="Preço" required><input class="input" id="km" type="number"
+                        placeholder="Quilometragem" required><select class="input" id="type">
+                        <option>Novo</option>
+                        <option>Seminovo</option>
+                        <option>Usado</option>
+                    </select><select class="input" id="gear">
+                        <option>Automático</option>
+                        <option>Manual</option>
+                    </select><select class="input" id="fuel">
+                        <option>Flex</option>
+                        <option>Gasolina</option>
+                        <option>Diesel</option>
+                        <option>Elétrico</option>
+                        <option>Híbrido</option>
+                    </select><select class="input" id="status">
+                        <option>Disponível</option>
+                        <option>Reservado</option>
+                        <option>Vendido</option>
+                    </select><input class="input wide" id="imageUrl"
+                        placeholder="URL da imagem ou envie um arquivo abaixo"><input class="input wide" id="imageFile"
+                        type="file" accept="image/*"><textarea class="input wide" id="description"
+                        placeholder="Descrição do veículo"></textarea><button class="btn" id="saveBtn"
+                        type="button">Salvar veículo</button><button class="btn outline" type="button"
+                        id="clearBtn">Limpar</button></form>
+            </section>
+            <section class="admin-card">
+                <h2>Veículos cadastrados</h2><input class="input" id="adminSearch" placeholder="Buscar no painel">
+                <div style="overflow:auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Imagem</th>
+                                <th>Veículo</th>
+                                <th>Preço</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carsTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/config.js"></script>
+    <script src="../assets/config.local.js"></script>
+    <script src="../assets/data.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
